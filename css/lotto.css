@@ -1,0 +1,290 @@
+@charset "UTF-8";
+/* Lotto Tracker CSS Document */
+
+/*
+YUI 3.6.0 (build 5521)
+Copyright 2012 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:110%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+button{font-family: Verdana, Geneva, sans-serif;}
+
+
+/* General styles
+---------------------------------------------------------------------------------------------------- */
+body {
+	font-family:Verdana, Geneva, sans-serif;
+	background:#FFF9DF;
+	color:#242424;
+}
+
+h1 {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:2em;
+	font-weight:bold;
+	padding:5px 0 10px;
+}
+
+h2 {
+	color:#222;
+	text-shadow:0 1px 0 #fff;
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+li {
+	float:left;
+	margin-right:10px
+}
+
+.clear {
+	clear:both;
+}
+
+
+/* General button styles
+---------------------------------------------------------------------------------------------------- */
+button,
+a.button, 
+button.submit {
+	position: relative;
+	display:inline-block;
+	padding: 5px 12px;
+
+	vertical-align: middle;
+	
+	-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+	
+	cursor: pointer;
+	outline: none;
+	border: none;
+	
+	text-align: center;
+
+	font-size:   1em; /* 16px / 16px */
+	line-height: 2em; /* 32px / 16px */
+}
+
+/* icon */
+button.icon,
+a.button.icon {
+	padding-right: 33px;
+}
+
+button.icon span,
+a.button.icon span {
+	position: absolute;
+	top: 13px;
+	right: 10px;
+}
+
+/* Icon plus */
+button.plus span,
+a.button.plus span {
+	width:16px;
+	height:16px;
+	vertical-align:middle;
+	display:inline-block;
+	background:url(../img/sprite_buttons.png) 0 0 no-repeat;
+}
+
+/* Icon delete */
+button.del span,
+a.button.del span {
+	width:16px;
+	height:16px;
+	vertical-align:middle;
+	display:inline-block;
+	background:url(../img/sprite_buttons.png) -24px 0 no-repeat;
+}
+
+/* Icon checked */
+button.check span,
+a.button.check span {
+	width:16px;
+	height:16px;
+	vertical-align:middle;
+	display:inline-block;
+	background:url(../img/sprite_buttons.png) -48px 0 no-repeat;
+}
+
+/* Yellow buttons */
+button.yellow,
+input.yellow,
+button.submit,
+a.button.yellow {
+	color: #000;
+	border: 1px solid #F4C63F;
+	background: #FADB4E;
+	font-weight: bold;
+	text-shadow: 0 1px 0  white;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #FFEFAA), to( #FFE155));
+	background-image: -webkit-linear-gradient( #FFEFAA, #FFE155);
+	background-image: -moz-linear-gradient( #FFEFAA, #FFE155);
+	background-image: -ms-linear-gradient( #FFEFAA, #FFE155);
+	background-image: -o-linear-gradient( #FFEFAA, #FFE155);
+	background-image: linear-gradient( #FFEFAA, #FFE155);
+	box-shadow:1px 2px #999;
+}
+
+button.yellow.click-action,
+input.yellow.chosen,
+a.button.yellow:active {
+	background: #e0c446;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #e5d89a), to( #e5c94c));
+	background-image: -webkit-linear-gradient( #e5d89a, #e5c94c);
+	background-image: -moz-linear-gradient( #e5d89a, #e5c94c);
+	background-image: -ms-linear-gradient( #e5d89a, #e5c94c);
+	background-image: -o-linear-gradient( #e5d89a, #e5c94c);
+	background-image: linear-gradient( #e5d89a, #e5c94c);
+	box-shadow:none;
+}
+
+
+button.green,
+a.button.green {
+	color: #000;
+	border: 1px solid #a9f43f;
+	background: #dcffaa;
+	font-weight: bold;
+	text-shadow: 0 1px 0  white;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #dcffaa), to( #93cd41));
+	background-image: -webkit-linear-gradient( #dcffaa, #93cd41);
+	background-image: -moz-linear-gradient( #dcffaa, #93cd41);
+	background-image: -ms-linear-gradient( #dcffaa, #93cd41);
+	background-image: -o-linear-gradient( #dcffaa, #93cd41);
+	background-image: linear-gradient( #dcffaa, #93cd41);
+	box-shadow:1px 2px #999;
+}
+
+
+button.green.click-action,
+a.button.green:active {
+	background: #c6e59a;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #c6e59a), to( #80b339));
+	background-image: -webkit-linear-gradient( #c6e59a, #80b339);
+	background-image: -moz-linear-gradient( #c6e59a, #80b339);
+	background-image: -ms-linear-gradient( #c6e59a, #80b339);
+	background-image: -o-linear-gradient( #c6e59a, #80b339);
+	background-image: linear-gradient( #c6e59a, #80b339);
+	box-shadow:none;
+}
+
+
+
+
+/* div Titles
+---------------------------------------------------------------------------------------------------- */
+div.title {
+	background:#2d2d2d;
+	color:#ffdd00 /*#ffe438*/;
+	text-align:center;
+}
+
+
+/* div results - that contains draws lottery
+---------------------------------------------------------------------------------------------------- */
+div.results {
+	padding:10px 10px 20px 10px;
+}
+
+div.results p {
+	margin-bottom:5px;
+	line-height:32px;
+}
+
+div.results p span, 
+div.results ul {
+	font-weight:bold;
+}
+
+
+/* div numbers - that contains our numbers and add numbers div
+---------------------------------------------------------------------------------------------------- */
+div.numbers {
+	border-top:1px #242424 solid;
+	border-bottom:1px #242424 solid;
+}
+
+div.numbers h2 {
+	padding:10px;
+	color:#242424;
+	background: #FFF3A5;
+}
+
+div.numbers li {
+	line-height:44px;
+}
+
+/* div that contains each set of number */
+div.number {
+	padding:5px 10px;
+	background: #FFF9DF;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFADF), to(#FFF3A5));
+	background-image: -webkit-linear-gradient(#FFFADF, #FFF3A5);
+	background-image: -moz-linear-gradient(#FFFADF, #FFF3A5);
+	background-image: -ms-linear-gradient(#FFFADF, #FFF3A5);
+	background-image: -o-linear-gradient(#FFFADF, #FFF3A5);
+	background-image: linear-gradient(#FFFADF, #FFF3A5);
+}
+
+
+/* div that contains Add new set Button and all chosen buttons */
+div.add {
+	padding:10px;
+	background: #FFF9DF;
+}
+
+div.add .add-wrapper {
+	height:50px;
+}
+
+div.add button#save-lottomax {
+	display:none;
+}
+
+div.numbers .choose-numbers {
+	display:none;
+	margin-top:10px;
+}
+
+div.numbers input.btn-number {
+	border:1px #ccc groove;
+	margin:0 0 7px 0;
+	padding:10px;
+	cursor:pointer;
+}
+
+
+/* div inside .add - contains visor where oyu can see chosen numbers */
+div.numbers div.visor {
+	min-height:20px;
+	background:#2d2d2d;
+	color:#fff;
+	padding:10px;
+	margin-bottom:5px;
+}
+
+div.visor p.visor-error {
+	color:#F00;
+	display:none;
+}
+
+
+/* div Messages
+---------------------------------------------------------------------------------------------------- */
+div.messages {
+	color:#000;
+	font-size:1.1em;
+	padding:5px 10px 15px 10px;
+	background:#DFD9BB;
+}
+
+div.messages p.gray {
+	color:#FFFADF;
+	margin-bottom:5px;
+}
+
